@@ -1,0 +1,16 @@
+movie1 = Movie.create(title: "Black Panther")
+movie2 = Movie.create(title: "Friends With Benefits")
+movie3 = Movie.create(title: "Waiting to Exhale")
+movie4 = Movie.create(title: "Us")
+movie5 = Movie.create(title: "Fast and Furious")
+movie6 = Movie.create(title: "Furious and Fast")
+
+actor1 = Actor.create(name: "Angela Bassett")
+actor2 = Actor.create(name: "Chadwick Boseman")
+actor3 = Actor.create(name: "Winston Duke")
+actor4 = Actor.create(name: "Lupita N'yongo")
+
+actor1.movies.push(movie1, movie3)
+actor2.movies.push(movie2)
+actor3.movies.push(movie5, movie4)
+actor4.movies.push(movie6, movie4)
