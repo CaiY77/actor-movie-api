@@ -10,4 +10,16 @@ def show
   render json: @Actor, include: :movies, status: :ok
 end
 
+def show
+  @movie = Movie.find(params[:movie_id])
+  @actor = Actor.find(params[:id])
+
+  if @movie.actors.include?(@actor)
+        render json: @actor, include: :movies, status: :ok
+  else
+        render json: {message: 'This Movie did not star this Actor'}, status: :ok
+  end
+
+end
+
 end
